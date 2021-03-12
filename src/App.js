@@ -47,7 +47,7 @@ function App() {
             <Route path="/samochody/:id" component={Car} />
             <Route path="/wyszukaj/:term?" component={Search} />
             <Route path="/zaloguj" component={Login} />
-            <Route path="/rejstracja" component={Register} />
+            <Route path="/rejestracja" component={Register} />
             <Route path="/" exact component={Home} />
             <Route component={NotFound} />
 
