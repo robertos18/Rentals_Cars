@@ -12,6 +12,7 @@
   background-color: #cdcdcd;
   background: url(../../assets/images/header.jpg) center;
   background-size: 110%;
+  background-repeat: no-repeat;
   position: absolute;
   top: -87%;
   bottom: -5%;
