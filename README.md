@@ -38,6 +38,5 @@ Project is created with:
 ## Setup
 Clone this repo to your desktop and run npm install to install all the dependencies.
 
-## Contact
-Created by robertmichalski1995@gmail.com - feel free to contact me!
+
 
