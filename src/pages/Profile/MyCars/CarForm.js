@@ -52,12 +52,12 @@ const CarForm = props => {
 
   const changeHandler = (value, fieldName) => {
 
-
-    const error = validate(form[fieldName].rules, value);
-
     if (form.name.value.length >= 2 && form.description.value.length >= 9) {
       setLoading(false)
     }
+
+    console.log(form[fieldName].rules)
+    const error = validate(form[fieldName].rules, value);
     setForm({
       ...form,
       [fieldName]: {
