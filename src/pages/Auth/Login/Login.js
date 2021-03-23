@@ -32,7 +32,7 @@ export default function Login(props) {
       });
       history.push('/');
     } catch (ex) {
-      setError(ex.response.data.error.message === 'EMAIL_NOT_FOUND' ? 'Nie poprawne dane' : null);
+      setError(ex.response.data.error.message);
       setLoading(false);
       console.log(ex.response);
     }
@@ -52,8 +52,9 @@ export default function Login(props) {
 
       <form onSubmit={submit}>
         <div className="form-group">
-          <label>Email</label>
+          <label htmlFor='email-input'>Email</label>
           <input
+            id='email-input'
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
