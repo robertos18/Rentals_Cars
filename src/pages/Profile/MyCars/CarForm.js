@@ -6,7 +6,7 @@ import LoadingButton from '../../../components/UI/LoadingButton/LoadingButton';
 
 const CarForm = props => {
   const [auth] = useAuth();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [form, setForm] = useState({
     name: {
       value: '',
@@ -51,6 +51,12 @@ const CarForm = props => {
   });
 
   const changeHandler = (value, fieldName) => {
+
+    if (form.name.value.length >= 2 && form.description.value.length >= 9) {
+      setLoading(false)
+    }
+
+    console.log(form[fieldName].rules)
     const error = validate(form[fieldName].rules, value);
     setForm({
       ...form,
@@ -64,7 +70,6 @@ const CarForm = props => {
   }
   const submit = async e => {
     e.preventDefault();
-    setLoading(true);
 
     try {
       props.onSubmit({
